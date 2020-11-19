@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'echo "Build - Hello World"'
+                sh 'echo ${BRANCH_NAME}'
             }
         }
         stage('Test') { 
