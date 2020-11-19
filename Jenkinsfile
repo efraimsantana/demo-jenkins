@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             agent any
             steps {
+                echo sh(script: 'env|sort', returnStdout: true)
                 sh 'echo "Build - Hello World"'
                 sh 'echo ${BRANCH_NAME}'
             }
